@@ -1,3 +1,3 @@
-cmake_minimum_required(3.16.3)
+cmake_minimum_required(VERSION 3.16.3)
 project(HELLOAPP)
 add_executable(main main.cpp)
