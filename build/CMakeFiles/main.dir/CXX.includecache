@@ -6,7 +6,5 @@
 
 #IncludeRegexTransform: 
 
-/home/systemtrio/cmake/main.cpp
-iostream
--
+/home/systemtrio/cmake/src/calc.cpp
 

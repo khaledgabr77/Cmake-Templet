@@ -1,7 +1,8 @@
 #include <iostream>
-
+#include "include/calc.hpp"
 
 int main(){
 
-    std::cout << "Hello" << std::endl;
+    std::cout << sum(1,2) << std::endl;
+    return 0;
 }

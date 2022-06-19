@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/systemtrio/cmake/main.cpp" "/home/systemtrio/cmake/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/systemtrio/cmake/src/calc.cpp" "/home/systemtrio/cmake/build/CMakeFiles/main.dir/src/calc.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
