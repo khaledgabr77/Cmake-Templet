@@ -1,4 +1,18 @@
 cmake_minimum_required(VERSION 3.16.3)
 project(HELLOAPP)
-add_executable(main main.cpp src/calc.cpp)
+set(SRC_FILES main.cpp src/calc.cpp)
+message("SRC Files has ${SRC_FILES}")
+message(STATUS "SRC Files has ${SRC_FILES}")
+#message(WARNING "SRC Files has ${SRC_FILES}")
+#message(FATAL_ERROR "SRC Files has ${SRC_FILES}")
+message("Path is ${CMAKE_SOURCE_DIR}")
+add_executable(main ${SRC_FILES})
+
+
+if(EXISTS ${CMAKE_SOURCE_DIR}/main.cpp)
+    message("File Here!")
+else()
+    message(FATAL_ERROR "File Not Here")
+endif()
+
 target_link_directories(main PUBLIC include/)
