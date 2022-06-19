@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/systemtrio/cmake/include/calc.hpp
+
+/home/systemtrio/cmake/lib/Wifi.hpp
+
+/home/systemtrio/cmake/main.cpp
+iostream
+-
+include/calc.hpp
+/home/systemtrio/cmake/include/calc.hpp
+lib/Wifi.hpp
+/home/systemtrio/cmake/lib/Wifi.hpp
+

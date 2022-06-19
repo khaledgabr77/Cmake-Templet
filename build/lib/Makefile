@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/systemtrio/cmake/build/CMakeFiles /home/systemtrio/cmake/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/systemtrio/cmake/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/systemtrio/cmake/build/CMakeFiles /home/systemtrio/cmake/build/lib/CMakeFiles/progress.marks
+	cd /home/systemtrio/cmake/build && $(MAKE) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/systemtrio/cmake/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/systemtrio/cmake/build && $(MAKE) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,98 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/systemtrio/cmake/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/systemtrio/cmake/build && $(MAKE) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/systemtrio/cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+lib/CMakeFiles/wifi_lib.dir/rule:
+	cd /home/systemtrio/cmake/build && $(MAKE) -f CMakeFiles/Makefile2 lib/CMakeFiles/wifi_lib.dir/rule
+.PHONY : lib/CMakeFiles/wifi_lib.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+# Convenience name for target.
+wifi_lib: lib/CMakeFiles/wifi_lib.dir/rule
 
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
-
-#=============================================================================
-# Target rules for targets named wifi_lib
-
-# Build rule for target.
-wifi_lib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 wifi_lib
 .PHONY : wifi_lib
 
 # fast build rule for target.
 wifi_lib/fast:
-	$(MAKE) -f lib/CMakeFiles/wifi_lib.dir/build.make lib/CMakeFiles/wifi_lib.dir/build
+	cd /home/systemtrio/cmake/build && $(MAKE) -f lib/CMakeFiles/wifi_lib.dir/build.make lib/CMakeFiles/wifi_lib.dir/build
 .PHONY : wifi_lib/fast
 
-main.o: main.cpp.o
+Wifi.o: Wifi.cpp.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-src/calc.o: src/calc.cpp.o
-
-.PHONY : src/calc.o
+.PHONY : Wifi.o
 
 # target to build an object file
-src/calc.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/calc.cpp.o
-.PHONY : src/calc.cpp.o
+Wifi.cpp.o:
+	cd /home/systemtrio/cmake/build && $(MAKE) -f lib/CMakeFiles/wifi_lib.dir/build.make lib/CMakeFiles/wifi_lib.dir/Wifi.cpp.o
+.PHONY : Wifi.cpp.o
 
-src/calc.i: src/calc.cpp.i
+Wifi.i: Wifi.cpp.i
 
-.PHONY : src/calc.i
+.PHONY : Wifi.i
 
 # target to preprocess a source file
-src/calc.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/calc.cpp.i
-.PHONY : src/calc.cpp.i
+Wifi.cpp.i:
+	cd /home/systemtrio/cmake/build && $(MAKE) -f lib/CMakeFiles/wifi_lib.dir/build.make lib/CMakeFiles/wifi_lib.dir/Wifi.cpp.i
+.PHONY : Wifi.cpp.i
 
-src/calc.s: src/calc.cpp.s
+Wifi.s: Wifi.cpp.s
 
-.PHONY : src/calc.s
+.PHONY : Wifi.s
 
 # target to generate assembly for a file
-src/calc.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/calc.cpp.s
-.PHONY : src/calc.cpp.s
+Wifi.cpp.s:
+	cd /home/systemtrio/cmake/build && $(MAKE) -f lib/CMakeFiles/wifi_lib.dir/build.make lib/CMakeFiles/wifi_lib.dir/Wifi.cpp.s
+.PHONY : Wifi.cpp.s
 
 # Help Target
 help:
@@ -198,14 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
 	@echo "... wifi_lib"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... src/calc.o"
-	@echo "... src/calc.i"
-	@echo "... src/calc.s"
+	@echo "... Wifi.o"
+	@echo "... Wifi.i"
+	@echo "... Wifi.s"
 .PHONY : help
 
 
@@ -217,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/systemtrio/cmake/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
